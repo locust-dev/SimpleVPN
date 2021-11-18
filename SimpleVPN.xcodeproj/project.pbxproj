@@ -8,22 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		19978B7D27468BA200FB908E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19978B7C27468BA200FB908E /* AppDelegate.swift */; };
-		19978B7F27468BA200FB908E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19978B7E27468BA200FB908E /* SceneDelegate.swift */; };
-		19978B8127468BA200FB908E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19978B8027468BA200FB908E /* ViewController.swift */; };
-		19978B8427468BA200FB908E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19978B8227468BA200FB908E /* Main.storyboard */; };
+		19978B8127468BA200FB908E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19978B8027468BA200FB908E /* MainViewController.swift */; };
 		19978B8627468BA300FB908E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19978B8527468BA300FB908E /* Assets.xcassets */; };
 		19978B8927468BA300FB908E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19978B8727468BA300FB908E /* LaunchScreen.storyboard */; };
+		19978B9127468D1B00FB908E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19978B9027468D1B00FB908E /* Extensions.swift */; };
+		19978B932746904500FB908E /* VPNInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19978B922746904500FB908E /* VPNInfo.swift */; };
+		19978B952746910100FB908E /* VPNStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19978B942746910100FB908E /* VPNStatus.swift */; };
+		19978B972746A0F000FB908E /* VPNHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19978B962746A0F000FB908E /* VPNHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		19978B7927468BA200FB908E /* SimpleVPN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleVPN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19978B7C27468BA200FB908E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		19978B7E27468BA200FB908E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		19978B8027468BA200FB908E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		19978B8327468BA200FB908E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		19978B8027468BA200FB908E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		19978B8527468BA300FB908E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19978B8827468BA300FB908E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		19978B8A27468BA300FB908E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19978B9027468D1B00FB908E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		19978B922746904500FB908E /* VPNInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNInfo.swift; sourceTree = "<group>"; };
+		19978B942746910100FB908E /* VPNStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNStatus.swift; sourceTree = "<group>"; };
+		19978B962746A0F000FB908E /* VPNHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,49 @@
 		19978B7B27468BA200FB908E /* SimpleVPN */ = {
 			isa = PBXGroup;
 			children = (
-				19978B7C27468BA200FB908E /* AppDelegate.swift */,
-				19978B7E27468BA200FB908E /* SceneDelegate.swift */,
-				19978B8027468BA200FB908E /* ViewController.swift */,
-				19978B8227468BA200FB908E /* Main.storyboard */,
+				19978B9A2746A11200FB908E /* Extensions */,
+				19978B992746A10400FB908E /* Modules */,
 				19978B8527468BA300FB908E /* Assets.xcassets */,
 				19978B8727468BA300FB908E /* LaunchScreen.storyboard */,
 				19978B8A27468BA300FB908E /* Info.plist */,
 			);
 			path = SimpleVPN;
+			sourceTree = "<group>";
+		};
+		19978B982746A0F600FB908E /* VPN */ = {
+			isa = PBXGroup;
+			children = (
+				19978B922746904500FB908E /* VPNInfo.swift */,
+				19978B962746A0F000FB908E /* VPNHandler.swift */,
+				19978B942746910100FB908E /* VPNStatus.swift */,
+			);
+			path = VPN;
+			sourceTree = "<group>";
+		};
+		19978B992746A10400FB908E /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				19978B7C27468BA200FB908E /* AppDelegate.swift */,
+				19978B982746A0F600FB908E /* VPN */,
+				19978B9B2746A11C00FB908E /* MainScreenModule */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		19978B9A2746A11200FB908E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				19978B9027468D1B00FB908E /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		19978B9B2746A11C00FB908E /* MainScreenModule */ = {
+			isa = PBXGroup;
+			children = (
+				19978B8027468BA200FB908E /* MainViewController.swift */,
+			);
+			path = MainScreenModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +165,6 @@
 			files = (
 				19978B8927468BA300FB908E /* LaunchScreen.storyboard in Resources */,
 				19978B8627468BA300FB908E /* Assets.xcassets in Resources */,
-				19978B8427468BA200FB908E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +175,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19978B8127468BA200FB908E /* ViewController.swift in Sources */,
+				19978B952746910100FB908E /* VPNStatus.swift in Sources */,
+				19978B8127468BA200FB908E /* MainViewController.swift in Sources */,
+				19978B9127468D1B00FB908E /* Extensions.swift in Sources */,
+				19978B972746A0F000FB908E /* VPNHandler.swift in Sources */,
+				19978B932746904500FB908E /* VPNInfo.swift in Sources */,
 				19978B7D27468BA200FB908E /* AppDelegate.swift in Sources */,
-				19978B7F27468BA200FB908E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		19978B8227468BA200FB908E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				19978B8327468BA200FB908E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		19978B8727468BA300FB908E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -293,7 +325,6 @@
 				INFOPLIST_FILE = SimpleVPN/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +351,6 @@
 				INFOPLIST_FILE = SimpleVPN/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
