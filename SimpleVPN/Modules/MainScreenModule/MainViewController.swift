@@ -80,13 +80,21 @@ final class MainViewController: UIViewController {
     // MARK: - Private methods
     
     @objc private func activateVPN() {
-        
+    
         currentVPNStatus.toggle()
         titleAboveMainButton.text = currentVPNStatus.rawValue
         
         if currentVPNStatus == .activate {
+            
+            VPNHandler.shared.initVPNTunnelProviderManager()
+            
             mainButton.setImage(Locals.powerOnImage, for: .normal)
         } else {
+            
+            
+            
+            
+            
             mainButton.setImage(Locals.powerOffImage, for: .normal)
         }
     }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		196736B8274C306300ACD2ED /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196736B7274C306300ACD2ED /* KeychainService.swift */; };
+		196736BC274C31A000ACD2ED /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 196736BB274C31A000ACD2ED /* NetworkExtension.framework */; };
 		19978B7D27468BA200FB908E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19978B7C27468BA200FB908E /* AppDelegate.swift */; };
 		19978B8127468BA200FB908E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19978B8027468BA200FB908E /* MainViewController.swift */; };
 		19978B8627468BA300FB908E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19978B8527468BA300FB908E /* Assets.xcassets */; };
@@ -18,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		196736B7274C306300ACD2ED /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		196736B9274C31A000ACD2ED /* SimpleVPN.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SimpleVPN.entitlements; sourceTree = "<group>"; };
+		196736BB274C31A000ACD2ED /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
 		19978B7927468BA200FB908E /* SimpleVPN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleVPN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19978B7C27468BA200FB908E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19978B8027468BA200FB908E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -35,17 +40,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				196736BC274C31A000ACD2ED /* NetworkExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		196736BA274C31A000ACD2ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				196736BB274C31A000ACD2ED /* NetworkExtension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		19978B7027468BA200FB908E = {
 			isa = PBXGroup;
 			children = (
 				19978B7B27468BA200FB908E /* SimpleVPN */,
 				19978B7A27468BA200FB908E /* Products */,
+				196736BA274C31A000ACD2ED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +75,7 @@
 		19978B7B27468BA200FB908E /* SimpleVPN */ = {
 			isa = PBXGroup;
 			children = (
+				196736B9274C31A000ACD2ED /* SimpleVPN.entitlements */,
 				19978B9A2746A11200FB908E /* Extensions */,
 				19978B992746A10400FB908E /* Modules */,
 				19978B8527468BA300FB908E /* Assets.xcassets */,
@@ -75,6 +91,7 @@
 				19978B922746904500FB908E /* VPNInfo.swift */,
 				19978B962746A0F000FB908E /* VPNHandler.swift */,
 				19978B942746910100FB908E /* VPNStatus.swift */,
+				196736B7274C306300ACD2ED /* KeychainService.swift */,
 			);
 			path = VPN;
 			sourceTree = "<group>";
@@ -179,6 +196,7 @@
 				19978B8127468BA200FB908E /* MainViewController.swift in Sources */,
 				19978B9127468D1B00FB908E /* Extensions.swift in Sources */,
 				19978B972746A0F000FB908E /* VPNHandler.swift in Sources */,
+				196736B8274C306300ACD2ED /* KeychainService.swift in Sources */,
 				19978B932746904500FB908E /* VPNInfo.swift in Sources */,
 				19978B7D27468BA200FB908E /* AppDelegate.swift in Sources */,
 			);
@@ -319,8 +337,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SimpleVPN/SimpleVPN.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UHQ7TS5P9H;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SimpleVPN/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -346,8 +366,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SimpleVPN/SimpleVPN.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UHQ7TS5P9H;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SimpleVPN/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
